@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <RelativeLayout
+        android:layout_width="409dp"
+        android:layout_height="912dp"
+        android:background="@color/backgroud"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="1dp">
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="201dp"
+            android:layout_height="184dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="111dp"
+            android:layout_marginTop="19dp"
+            app:srcCompat="@drawable/avatar" />
+
+        <TextView
+            android:id="@+id/nickname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/imageView3"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="102dp"
+            android:layout_marginBottom="-46dp"
+            android:text="@string/user_id_0_name"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="315dp"
+            android:text="Прочитанные тайтлы:"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="132dp"
+            android:layout_height="188dp"
+            android:layout_alignBottom="@id/textView8"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="7dp"
+            android:layout_marginBottom="-197dp"
+            app:srcCompat="@drawable/chainsaw_man" />
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="132dp"
+            android:layout_height="188dp"
+            android:layout_alignLeft="@id/imageView4"
+            android:layout_alignTop="@id/imageView4"
+            android:layout_marginLeft="133dp"
+            android:layout_marginTop="0dp"
+            app:srcCompat="@drawable/chainsaw_man" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="132dp"
+            android:layout_height="188dp"
+            android:layout_alignLeft="@id/imageView4"
+            android:layout_alignTop="@id/imageView4"
+            android:layout_marginLeft="267dp"
+            android:layout_marginTop="0dp"
+            app:srcCompat="@drawable/chainsaw_man" />
+
+        <Button
+            android:id="@+id/addfriendbtn"
+            android:layout_width="318dp"
+            android:layout_height="88dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="47dp"
+            android:layout_marginTop="567dp"
+            android:text="Добавить в друзья"
+            android:textSize="23sp" />
+
+        <EditText
+            android:id="@+id/state"
+            android:layout_width="347dp"
+            android:layout_height="57dp"
+            android:layout_alignTop="@id/nickname"
+            android:layout_alignParentLeft="true"
+            android:layout_marginLeft="37dp"
+            android:layout_marginTop="31dp"
+            android:background="#00FFFFFF"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="@string/user_id_0_state"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF"
+            android:textSize="20sp" />
+    </RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
