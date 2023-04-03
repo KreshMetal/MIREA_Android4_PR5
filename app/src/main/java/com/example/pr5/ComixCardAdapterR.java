@@ -10,6 +10,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.io.Serializable;
 import java.util.List;
 
 public class ComixCardAdapterR extends RecyclerView.Adapter<ComixCardAdapterR.ViewHolder>
@@ -43,7 +44,6 @@ public class ComixCardAdapterR extends RecyclerView.Adapter<ComixCardAdapterR.Vi
         holder.desc.setText(card.getDesc());
         holder.name.setText(card.getName());
         holder.logo.setImageResource(card.getLogo());
-
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view)

@@ -7,4 +7,5 @@
     <string name="sttring_for_code_replace">Наруто</string>
     <string name="bottom_nav_menu_home">Главная</string>
     <string name="bottom_nav_menu_profile">Профиль</string>
+    <string name="add_to_friend_notify">Добавление в друзья</string>
 </resources>

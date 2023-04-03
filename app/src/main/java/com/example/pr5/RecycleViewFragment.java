@@ -1,6 +1,9 @@
 package com.example.pr5;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.provider.Settings;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,6 +21,7 @@ import java.util.ArrayList;
 public class RecycleViewFragment extends Fragment
 {
     private static final String TAG = "Recycle";
+    private static final int REQUEST_CODE = 911;
     ArrayList<ComixCard> cards;
 
     @Nullable
@@ -38,7 +42,16 @@ public class RecycleViewFragment extends Fragment
                 ComixCard comixCard = cards.get(position);
                 Bundle result = new Bundle();
                 result.putSerializable(ComixCard.class.getSimpleName(), comixCard);
-                Navigation.findNavController(view).navigate(R.id.action_home_to_comix, result);
+                //Navigation.findNavController(view).navigate(R.id.action_home_to_comix, result);
+                if (Settings.canDrawOverlays(getContext())) {
+                    Intent intent = new Intent(getActivity().getApplicationContext(), MyService.class);
+                    intent.putExtra(ComixCard.class.getSimpleName(), comixCard);
+                    getActivity().startService(intent);
+                } else {
+                    Intent intent = new Intent(Settings.ACTION_MANAGE_OVERLAY_PERMISSION, Uri.parse("package:" + getActivity().getPackageName()));
+                    startActivityForResult(intent, REQUEST_CODE);
+                }
+
             }
         };
 
@@ -47,7 +60,6 @@ public class RecycleViewFragment extends Fragment
 
         return view;
     }
-
     private void InitList()
     {
         cards = new ArrayList<>();
